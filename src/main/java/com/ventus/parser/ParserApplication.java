@@ -27,8 +27,8 @@ public class ParserApplication {
     private static IParse iparse = null;
     private static IExecute iexecute = null;
     public static int port = 8092;
-    public static String ip = "localhost:"+port;
-    public static String myip = "localhost:8092";
+    public static String ip = "localhost:8090";
+    public static String myip = "localhost:"+port;
 
     /**
      * Метод для запуска сервера
