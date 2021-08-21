@@ -163,8 +163,8 @@ public class ParserApplication {
 //            } catch (InterruptedException ignored){}
 //        }
         while (true) {
-            String ip = "localhost:8080";
-            String myip = "localhost:8000";
+            String ip = "localhost:8090";
+            String myip = "localhost:8092";
             if (registry(ip, name, myip)) {
                 break;
             } else {
