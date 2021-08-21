@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static com.ventus.parser.ParserApplication.port;
 import static com.ventus.parser.modules.Sender.output_servers;
 
 public class Http implements Runnable {
@@ -29,7 +30,7 @@ public class Http implements Runnable {
     public void run() {
         executorservice.execute(() -> {
             try {
-                HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+                HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
                 server.createContext("/test", new MyHandler());
                 server.createContext("/add", new AddHandler());
                 server.createContext("/output", new OutPutHandler());

@@ -26,6 +26,9 @@ public class ParserApplication {
     public static Loader loader = new Loader();
     private static IParse iparse = null;
     private static IExecute iexecute = null;
+    public static int port = 8092;
+    public static String ip = "localhost:"+port;
+    public static String myip = "localhost:8092";
 
     /**
      * Метод для запуска сервера
@@ -163,8 +166,6 @@ public class ParserApplication {
 //            } catch (InterruptedException ignored){}
 //        }
         while (true) {
-            String ip = "localhost:8090";
-            String myip = "localhost:8092";
             if (registry(ip, name, myip)) {
                 break;
             } else {
